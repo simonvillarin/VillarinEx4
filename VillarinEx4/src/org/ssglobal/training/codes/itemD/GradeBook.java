@@ -5,8 +5,9 @@ public class GradeBook {
 
 	public void printGrades() {
 		for (double grade : grades) {
-			System.out.println(grade);
+			System.out.print(grade + " ");
 		}
+		System.out.println("");
 	}
 
 	public double averageGrades() {
@@ -37,7 +38,7 @@ public class GradeBook {
         for (double grade : grades) {
             if (grade == newGrade) {
                 exists = true;
-                return;
+                break;
             }
         }       
         if (!exists) {
