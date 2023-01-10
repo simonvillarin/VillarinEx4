@@ -34,10 +34,10 @@ public class GradeBook {
         int tempIndex = 0;
 		boolean exists = false;
 		
-        for (double g : grades) {
-            if (g == newGrade) {
+        for (double grade : grades) {
+            if (grade == newGrade) {
                 exists = true;
-                break;
+                return;
             }
         }       
         if (!exists) {

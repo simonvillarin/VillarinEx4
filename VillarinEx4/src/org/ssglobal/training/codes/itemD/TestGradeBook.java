@@ -22,6 +22,7 @@ public class TestGradeBook {
 		gradeBook.deleteGrades(4);
 		gradeBook.deleteGrades(5);	
 		gradeBook.deleteGrades(11);
+		gradeBook.printGrades();
 	}
 
 }
