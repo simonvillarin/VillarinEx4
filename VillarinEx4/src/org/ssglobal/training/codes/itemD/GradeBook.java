@@ -30,27 +30,31 @@ public class GradeBook {
 		grades = temp;
 	}
 
-	protected void deleteGrades(double newGrade) {
-        double[] temp = new double[grades.length - 1];
-        int tempIndex = 0;
-		boolean exists = false;
+	protected void deleteGrades(double grade) {
+        int numOfGrades = 0;
+		boolean isExists = false;
 		
-        for (double grade : grades) {
-            if (grade == newGrade) {
-                exists = true;
-                break;
-            }
-        }       
-        if (!exists) {
-            System.out.println("Grade does not exist");
-            return;
-        }  
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] != newGrade) {
-                temp[tempIndex] = grades[i];
-                tempIndex++;
+        for (double g : grades) {
+            if (g == grade) {
+                isExists = true;
+                numOfGrades++;
             }
         }
-        grades = temp;
+        
+        double[] temp = new double[grades.length - numOfGrades];
+        
+        if (isExists) {
+        	int tempIndex = 0;
+        	
+        	 for (int i = 0; i < grades.length; i++) {
+                 if (grades[i] != grade) {
+                     temp[tempIndex] = grades[i];
+                     tempIndex++;
+                 }
+             }
+             grades = temp;
+        }  else {
+        	System.out.println(grade + " does not exist.");
+        }
 	}
 }
