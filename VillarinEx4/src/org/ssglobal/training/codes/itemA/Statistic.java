@@ -25,8 +25,8 @@ public record Statistic(int... data) {
 		double totalSquared = 0;
 		
 		for (int value : data) {
-			double difference = value -= mean;
-			double squared = difference * difference;
+			value -= mean;
+			double squared = value * value;
 			totalSquared += squared;
 		}	
 		return totalSquared / data.length;
