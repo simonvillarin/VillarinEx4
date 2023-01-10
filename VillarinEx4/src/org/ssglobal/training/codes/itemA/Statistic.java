@@ -15,8 +15,7 @@ public record Statistic(int... data) {
 		
 		for (int value : data) {
 			product *= value;
-		}
-		
+		}		
 		return Math.sqrt(product);
 	}
 	

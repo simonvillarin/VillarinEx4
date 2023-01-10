@@ -16,7 +16,6 @@ public class GradeBook {
 		for (double grade : grades) {
 			sum += grade;
 		}
-
 		return sum / grades.length;
 	}
 
